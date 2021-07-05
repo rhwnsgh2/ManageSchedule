@@ -10,8 +10,15 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "5.11.11",
     "react": "17.0.1",
-    "react-native": "0.64.2"
+    "react-native": "0.64.2",
+    "react-native-calendars": "1.1264.0",
+    "react-native-debugger": "1.1.0",
+    "react-native-debugger-open": "0.3.25",
+    "react-redux": "7.2.4",
+    "redux": "4.1.0",
+    "redux-devtools-extension": "2.13.9"
   },
   "devDependencies": {
     "@babel/core": "7.14.6",

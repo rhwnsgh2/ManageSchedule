@@ -8,11 +8,12 @@
 
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import CalendarComponent from './calendar/calendar';
 
 const App = () => {
   return (
     <View>
-      <Text>mainPage</Text>
+      <CalendarComponent />
     </View>
   );
 };
