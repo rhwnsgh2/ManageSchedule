@@ -9,12 +9,14 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import CalendarComponent from './calendar/calendar';
+import {NavigationContainer} from '@react-navigation/native';
+import BottomNavi from './bottomNavigator/bottomNavigator';
 
 const App = () => {
   return (
-    <View>
-      <CalendarComponent />
-    </View>
+    <NavigationContainer>
+      <BottomNavi />
+    </NavigationContainer>
   );
 };
 

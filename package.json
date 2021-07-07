@@ -5,17 +5,23 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start",
+    "start": "react-native run-android",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "rndebugger-open"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "5.11.11",
+    "@react-navigation/native": "5.9.4",
     "react": "17.0.1",
     "react-native": "0.64.2",
     "react-native-calendars": "1.1264.0",
     "react-native-debugger": "1.1.0",
     "react-native-debugger-open": "0.3.25",
+    "react-native-safe-area-context": "3.2.0",
+    "react-native-screens": "3.4.0",
+    "react-native-vector-icons": "8.1.0",
+    "react-navigation": "4.4.4",
     "react-redux": "7.2.4",
     "redux": "4.1.0",
     "redux-devtools-extension": "2.13.9"
