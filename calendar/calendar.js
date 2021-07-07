@@ -14,13 +14,21 @@ const CalendarComponent = () => {
         textMonthFontSize: 18,
         'stylesheet.calendar.header': {
           header: {
-            height: height.calendarHeader,
+            height: height.calendarHeaderMonth,
             flexDirection: 'row',
             justifyContent: 'space-between',
             paddingLeft: 10,
             paddingRight: 10,
             marginTop: 6,
             alignItems: 'center',
+          },
+          dayHeader: {
+            marginTop: 2,
+            marginBottom: 7,
+            width: 32,
+            textAlign: 'center',
+            height: height.calendarHeaderDayText,
+            fontSize: 15,
           },
           dayTextAtIndex0: {
             color: 'red',
@@ -47,9 +55,9 @@ const CalendarComponent = () => {
       }}
       current={Date()}
       // Minimum date that can be selected, dates before minDate will be grayed out. Default = undefined
-      minDate={'2021-07-01'}
+      //minDate={'2021-07-01'}
       // Maximum date that can be selected, dates after maxDate will be grayed out. Default = undefined
-      maxDate={'2021-07-31'}
+      //maxDate={'2021-07-31'}
       // Handler which gets executed on day press. Default = undefined
       onDayPress={day => {
         console.log('selected day', day);

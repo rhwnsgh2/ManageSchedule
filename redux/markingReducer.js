@@ -6,7 +6,7 @@ const markedInitialState = {
 export const setMarking = marked => {
   return {
     type: SET_MARKING,
-    marked: menu,
+    marked: marked,
   };
 };
 

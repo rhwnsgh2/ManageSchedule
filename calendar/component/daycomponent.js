@@ -1,10 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import calcWork from '../../lib/calcWork';
+import * as height from '../../lib/setHeight';
 
 const DayComponent = ({date, state, marking}) => {
-  const work = undefined;
+  const schedule = calcWork(date.year, date.month, date.day);
+  const work = {use: true, schedule: schedule};
   return (
-    <View style={styles.dayContainer}>
+    <View style={[styles.dayContainer, {height: height.dayComponent}]}>
       <View style={stylesDay.container}>
         <Text
           style={[
@@ -26,7 +29,7 @@ const WorkComponent = ({work}) => {
   if (work && work.use) {
     return (
       <View style={stylesWork.container}>
-        <Text>MID</Text>
+        <Text>{work.schedule}</Text>
       </View>
     );
   } else {
@@ -37,8 +40,8 @@ const WorkComponent = ({work}) => {
 const styles = StyleSheet.create({
   dayContainer: {
     flexDirection: 'column',
-    height: 50,
     alignItems: 'center',
+    width: '100%',
   },
   disableText: {
     color: 'gray',
@@ -59,7 +62,7 @@ const stylesDay = StyleSheet.create({
     flex: 1,
   },
   text: {
-    textAlign: 'center',
+    textAlign: 'left',
   },
   enableText: {
     color: 'black',
