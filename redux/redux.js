@@ -1,4 +1,6 @@
 import {combineReducers, createStore, Reducer, Store} from 'redux';
+import {markingReducer} from './markingReducer';
+import {workReducer} from './workReducer';
 
 const rootReducer = combineReducers({
   work: workReducer,

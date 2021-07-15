@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import calcWork from '../../lib/calcWork';
 import * as height from '../../lib/setHeight';
 
@@ -7,7 +7,8 @@ const DayComponent = ({date, state, marking}) => {
   const schedule = calcWork(date.year, date.month, date.day);
   const work = {use: true, schedule: schedule};
   return (
-    <View style={[styles.dayContainer, {height: height.dayComponent}]}>
+    <TouchableOpacity
+      style={[styles.dayContainer, {height: height.dayComponent}]}>
       <View style={stylesDay.container}>
         <Text
           style={[
@@ -21,7 +22,7 @@ const DayComponent = ({date, state, marking}) => {
       <View style={stylesSchedule.container}>
         <Text>dd </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -42,6 +43,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     width: '100%',
+    borderRadius: 20,
   },
   disableText: {
     color: 'gray',

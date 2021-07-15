@@ -11,11 +11,12 @@ import {StyleSheet, Text, View} from 'react-native';
 import CalendarComponent from './calendar/calendar';
 import {NavigationContainer} from '@react-navigation/native';
 import BottomNavi from './bottomNavigator/bottomNavigator';
+import DrawNavi from './drawerNavigation/drawerNavigator';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <BottomNavi />
+      <DrawNavi />
     </NavigationContainer>
   );
 };
