@@ -11,6 +11,7 @@ const DayComponent = ({date, state, marking}) => {
       style={[styles.dayContainer, {height: height.dayComponent}]}>
       <View style={stylesDay.container}>
         <Text
+          testID="DayText"
           style={[
             stylesDay.text,
             state === 'disabled' ? stylesDay.disableText : stylesDay.enableText,
@@ -59,7 +60,7 @@ const stylesWork = StyleSheet.create({
   },
 });
 
-const stylesDay = StyleSheet.create({
+export const stylesDay = StyleSheet.create({
   container: {
     flex: 1,
   },
