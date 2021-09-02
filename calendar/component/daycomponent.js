@@ -27,11 +27,11 @@ const DayComponent = ({date, state, marking}) => {
   );
 };
 
-const WorkComponent = ({work}) => {
+export const WorkComponent = ({work}) => {
   if (work && work.use) {
     return (
-      <View style={stylesWork.container}>
-        <Text>{work.schedule}</Text>
+      <View testID="WorkComponent" style={stylesWork.container}>
+        <Text testID="WorkComponent_Schedule">{work.schedule}</Text>
       </View>
     );
   } else {
